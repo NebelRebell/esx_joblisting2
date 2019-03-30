@@ -42,27 +42,25 @@ AddEventHandler('esx_joblisting:postApplication', function(dataTemp)
 	function(rows)
 				
 		for i = 1, #rows, 1 do
-			_name = rows[i].firstname .. ' ' .. rows[i].lastname
-		end
+		_name = rows[i].firstname .. ' ' .. rows[i].lastname
+	end
 
-		if data.type == "police" then
-			postApp(_name, data.phone, data.licenses, data.exp, Config.Webhook.police)
-		elseif data.type == "ambulance" then
-			postApp(_name, data.phone, data.licenses, data.exp, Config.Webhook.ambulance)
-		elseif data.type == "journalist" then
-			postApp(_name, data.phone, data.licenses, data.exp, Config.Webhook.journalist)
-		elseif data.type == "cardealer" then
-			postApp(_name, data.phone, data.licenses, data.exp, Config.Webhook.cardealer)
-		elseif data.type == "mechanic" then
-			postApp(_name, data.phone, data.licenses, data.exp, Config.Webhook.mechanic)
-		elseif data.type == "realestate" then
-			postApp(_name, data.phone, data.licenses, data.exp, Config.Webhook.realestate)
-		elseif data.type == "taxi" then
-			postApp(_name, data.phone, data.licenses, data.exp, Config.Webhook.taxi)
-		elseif data.type == "delivery" then
-			postApp(_name, data.phone, data.licenses, data.exp, Config.Webhook.delivery)
-		end
-	end)
+	if data.type == "police" then
+		postApp(_name, data.phone, data.licenses, data.exp, Config.Webhook.police)
+	elseif data.type == "ambulance" then
+		postApp(_name, data.phone, data.licenses, data.exp, Config.Webhook.ambulance)
+	elseif data.type == "mechanic" then
+		postApp(_name, data.phone, data.licenses, data.exp, Config.Webhook.mechanic)
+	elseif data.type == "taxi" then
+		postApp(_name, data.phone, data.licenses, data.exp, Config.Webhook.taxi)
+	elseif data.type == "cardealer" then
+		postApp(_name, data.phone, data.licenses, data.exp, Config.Webhook.cardealer)
+	elseif data.type == "banker" then
+		postApp(_name, data.phone, data.licenses, data.exp, Config.Webhook.banker)
+	elseif data.type == "realestateagent" then
+		postApp(_name, data.phone, data.licenses, data.exp, Config.Webhook.realestateagent)
+	end
+end)
 
 end)
 
@@ -70,22 +68,22 @@ function postApp(name, phone, licenses, exp, webhook)
 	local embeds = {
 	{
 		["type"] = "rich",
-		["title"] = "New application:" ,
+		["title"] = "ACHTUNG BEWERBUNG!" ,
 		["fields"] =  {
 						{
-						["name"]= "Name:",
+						["name"]= "Roleplay-Name:",
 						["value"]= _name,
 						},
 						{
-							["name"]= "Phonenumber:",
+							["name"]= "Rückrufnummer:",
 							["value"]= phone,
 						},
 						{
-							["name"]= "Driver licenses:",
+							["name"]= "SteamID:",
 							["value"]= licenses,
 						},
 						{
-							["name"]= "Priorn experience:",
+							["name"]= "Bewerbung:",
 							["value"]= exp,
 						},
 				},
