@@ -41,30 +41,26 @@ $(document).ready(function(){
 	} else if ($("#ambulance").is(":checked")) {
 		
 		_type = "ambulance";
-		
-  } else if ($("#journalist").is(":checked")) {
-		
-		_type = "journalist";
-		
-  } else if ($("#cardealer").is(":checked")) {
-		
-		_type = "cardealer";
-		
-  } else if ($("#mechanic").is(":checked")) {
+
+	} else if ($("#mechanic").is(":checked")) {
 		
 		_type = "mechanic";
-		
-  } else if ($("#realestate").is(":checked")) {
-		
-		_type = "realestate";
-		
-  } else if ($("#taxi").is(":checked")) {
+	
+	} else if ($("#taxi").is(":checked")) {
 		
 		_type = "taxi";
 		
-  } else if ($("#delivery").is(":checked")) {
+	} else if ($("#cardealer").is(":checked")) {
 		
-		_type = "delivery";
+		_type = "cardealer";
+	
+	} else if ($("#banker").is(":checked")) {
+		
+		_type = "banker";
+		
+	} else if ($("#realestateagent").is(":checked")) {
+		
+		_type = "realestateagent";
 		
 	}
 	
