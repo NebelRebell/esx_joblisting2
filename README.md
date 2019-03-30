@@ -35,6 +35,7 @@ git clone https://github.com/NebelRebell/esx_joblisting2.git [esx]/esx_joblistin
 - Add this in your `server.cfg`:
 
 ```
+#start esx_joblisting
 start esx_joblisting2
 ```
 
