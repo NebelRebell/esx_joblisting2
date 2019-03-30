@@ -1,3 +1,5 @@
+# GERMAN EDITION
+
 ## INSTRUCTION
 Application to the employment office at a known location. Callback number and SteamID64 added; application will be implemented and posted directly in Discord via Weebhook-Link.
 
